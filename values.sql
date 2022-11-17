@@ -11,4 +11,11 @@ INSERT INTO companies (name, rut, email, phone, address) VALUES
 INSERT INTO roles (name) VALUES
     ( 'Admin'),
     ( 'Seller'),
-    ( 'Customer')
+    ( 'Customer');
+
+INSERT INTO users (name, email, password, company_id) VALUES
+    ( 'admin','ramon-alba@admin.cl', '1234', 1),
+    ( 'Seller', 'ramon-alba@seller.cl', '4567', 1),
+    ( 'Customer', 'ramon-alba@seller.cl', '123456', 1), 
+    ( 'admin','meilyn-comencan@admin.cl', '1234', 1),
+    ( 'Seller', 'meilyn-comencan@seller.cl', '4567', 1);

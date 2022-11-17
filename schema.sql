@@ -29,6 +29,11 @@ CREATE TABLE IF NOT EXISTS UserRoles(
     FOREIGN KEY (role_id) REFERENCES Roles(id)
 );
 
+CREATE TABLE IF NOT EXISTS Customers (
+    seller_id INT NOT NULL REFERENCES Users(id),
+    company_id INT NOT NULL REFERENCES Companies(id)
+);
+
 CREATE TABLE IF NOT EXISTS Products (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -36,7 +41,6 @@ CREATE TABLE IF NOT EXISTS Products (
     net_price FLOAT NOT NULL,
     suggested_price FLOAT NOT NULL,
     brand VARCHAR(100) NOT NULL,
-
     company_id INT NOT NULL,
     FOREIGN KEY (company_id) REFERENCES Companies(id)
 );

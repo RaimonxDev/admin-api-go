@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  psql:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_DB=ADMIN
+      - POSTGRES_USER=RAMON
+      - POSTGRES_PASSWORD=RamonGo
+    ports:
+      - "5434:5432"
+    volumes:
+      - admin_db_go:/var/lib/postgresql/data
+volumes:
+  admin_db_go:

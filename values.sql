@@ -13,9 +13,9 @@ INSERT INTO roles (name) VALUES
     ( 'Seller'),
     ( 'Customer');
 
-INSERT INTO users (name, email, password, company_id) VALUES
-    ( 'admin','ramon-alba@admin.cl', '1234', 1),
-    ( 'Seller', 'ramon-alba@seller.cl', '4567', 1),
-    ( 'Customer', 'ramon-alba@seller.cl', '123456', 1), 
-    ( 'admin','meilyn-comencan@admin.cl', '1234', 1),
-    ( 'Seller', 'meilyn-comencan@seller.cl', '4567', 1);
+INSERT INTO users (name, email, password, company_id, roles_id) VALUES
+    ( 'Ramon','ramon-alba@admin.cl', '1234', 1, 1),
+    ( 'Jesus', 'jesus-alba@seller.cl', '4567', 1, 2),
+    ( 'Miguel', 'miguel-alba@seller.cl', '123456', 1, 3),
+    ( 'Meilyn','meilyn-comencan@admin.cl', '1234', 2, 1),
+    ( 'Andreina', 'andreina-comencan@seller.cl', '4567', 2,2);

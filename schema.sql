@@ -21,14 +21,6 @@ CREATE TABLE IF NOT EXISTS Roles(
     name VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS UserRoles(
-    id SERIAL PRIMARY KEY,
-    user_id INT NOT NULL,
-    role_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES Users(id),
-    FOREIGN KEY (role_id) REFERENCES Roles(id)
-);
-
 CREATE TABLE IF NOT EXISTS Customers (
     seller_id INT NOT NULL REFERENCES Users(id),
     company_id INT NOT NULL REFERENCES Companies(id)
